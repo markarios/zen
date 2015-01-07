@@ -1,0 +1,10 @@
+body {
+background: #4c4c4c;
+background: -moz-linear-gradient(-45deg, #4c4c4c 0%, #474747 0%, #666666 0%, #595959 0%, #2c2c2c 34%, #000000 51%, #111111 60%, #1c1c1c 91%, #131313 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, #4c4c4c), color-stop(0%, #474747), color-stop(0%, #666666), color-stop(0%, #595959), color-stop(34%, #2c2c2c), color-stop(51%, #000000), color-stop(60%, #111111), color-stop(91%, #1c1c1c), color-stop(100%, #131313));
+background: -webkit-linear-gradient(-45deg, #4c4c4c 0%, #474747 0%, #666666 0%, #595959 0%, #2c2c2c 34%, #000000 51%, #111111 60%, #1c1c1c 91%, #131313 100%);
+background: -o-linear-gradient(-45deg, #4c4c4c 0%, #474747 0%, #666666 0%, #595959 0%, #2c2c2c 34%, #000000 51%, #111111 60%, #1c1c1c 91%, #131313 100%);
+background: -ms-linear-gradient(-45deg, #4c4c4c 0%, #474747 0%, #666666 0%, #595959 0%, #2c2c2c 34%, #000000 51%, #111111 60%, #1c1c1c 91%, #131313 100%);
+background: linear-gradient(135deg, #4c4c4c 0%, #474747 0%, #666666 0%, #595959 0%, #2c2c2c 34%, #000000 51%, #111111 60%, #1c1c1c 91%, #131313 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=1 );
+}

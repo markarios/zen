@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script src="d3.js"></script>
+    <script src="colorbrewer.js"></script>
+    <script src = "d3.zen.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+      div {
+        display: inline-block;
+      }
+
+    </style>
+  </head>
+  <body>
+  <script>
+    var entries = d3.entries(colorbrewer);
+    var ranges = [];
+    entries.forEach(function(d){
+      //Bostock coding within the push
+      ranges.push(d.value[d3.keys(d.value).map(Number).sort(d3.descending)[0]]);
+      }
+    )
+    function altScale(_colors){return d3.scale.ordinal().range(_colors);}
+   
+    function forceFcn(chart){return d3.zen.forceChart().chartClass(chart).width(80).height(80).radius(5).linkDistance(20)};
+   
+    i = 0;
+    ranges.forEach(function(d){
+      d3.select("body")
+       .append("div")
+       .attr("id",function(d){return "node" + i;})
+      d3.select("#node"+i)
+        .datum(d3.zen.linearForceData(d))
+        .call(forceFcn(d).colorScale(altScale(d)));
+      i++;
+    })
+  </script>
+  </body>
+</html>
