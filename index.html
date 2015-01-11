@@ -24,19 +24,17 @@
     var entries = d3.entries(colorbrewer);
     var ranges = [];
     entries.forEach(function(d){
-      //Bostock coding within the push from every color brewer scale block.
+      //Bostock coding within the push from every color brewer scale block. 
       ranges.push(d.value[d3.keys(d.value).map(Number).sort(d3.descending)[0]]);
       }
     )
     function altScale(_colors){return d3.scale.ordinal().range(_colors);}
-   
     function forceFcn(chart){return d3.zen.forceChart()
       .chartClass(chart)
       .width(80)
       .height(80)
       .radius(5)
       .linkDistance(10)};
-   
     i = 0;
     ranges.forEach(function(d){
       d3.select("body")
